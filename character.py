@@ -1,4 +1,6 @@
 import random
+from point import Point
+from direction import Direction 
 class Character:
     def __init__(self, game_board):
         self.location = Point(random.randint(0,8), random.randint(0,8))
@@ -19,6 +21,6 @@ class Character:
             print("Pick north, south, east or west")
 
     def look(self):
-        for(tree in self.game_board.trees):
+        for tree in self.game_board.trees:
             if tree.location.distance_to(self.location) <= self.sight_distance:
-                print tree
+                print("hi")

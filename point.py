@@ -7,3 +7,6 @@ class Point:
     def distance_to(self, point):
         distance = math.sqrt((self.x + point.x)**2.0 + (self.y + point.y)**2.0)
         return distance
+
+    def __repr__(self):
+        return("(%d, %d)" % (self.x, self.y))
